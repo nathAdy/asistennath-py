@@ -5,7 +5,7 @@ import time
 from gtts import gTTS
 import os
 
-nama_bos = "Boss Nath"
+nama_pengguna = "Boss Nath"
 
 # ubah teks ke suara (tts)
 def speak(text):
@@ -19,14 +19,14 @@ def speak(text):
 def greetMe():
     currentH = int(datetime.datetime.now().hour)
     if 0 <= currentH < 12:
-        speak(f"Selamat Pagi, {nama_bos}!")
-        print(f"Selamat Pagi, {nama_bos}!")
+        speak(f"Selamat Pagi, {nama_pengguna}!")
+        print(f"Selamat Pagi, {nama_pengguna}!")
     elif 12 <= currentH < 18:
-        speak(f"Selamat Siang, {nama_bos}!")
-        print(f"Selamat Siang, {nama_bos}!")
+        speak(f"Selamat Siang, {nama_pengguna}!")
+        print(f"Selamat Siang, {nama_pengguna}!")
     else:
-        speak(f"Selamat Malam, {nama_bos}!")
-        print(f"Selamat Malam, {nama_bos}!")
+        speak(f"Selamat Malam, {nama_pengguna}!")
+        print(f"Selamat Malam, {nama_pengguna}!")
 
 # dengar perintah suara
 def myCommand():
@@ -40,7 +40,7 @@ def myCommand():
     
     try:
         command = r.recognize_google(audio, language='id-ID').lower()
-        print(f'Nath: {command}\n')
+        print(f'{nama_pengguna}: {command}\n')
     except sr.UnknownValueError:
         print('Ayy: Saya tidak mendengar perintah dengan jelas, coba lagi!')
         return myCommand()
@@ -50,8 +50,8 @@ def myCommand():
 def assistant(command):
     """Menjalankan perintah berdasarkan input suara"""
     if 'halo' in command:
-        speak("Halo Nath! Ada yang bisa saya bantu?")
-        print('Ayy: Halo Nath! Ada yang bisa saya bantu?')
+        speak(f"Halo {nama_pengguna}! Ada yang bisa saya bantu?")
+        print(f'Ayy: Halo {nama_pengguna}! Ada yang bisa saya bantu?')
     
     elif 'buka google' in command:
         speak("Membuka Google")
@@ -86,8 +86,8 @@ def assistant(command):
         webbrowser.open(f'https://www.youtube.com/results?search_query={search_query}')
 
     elif 'buka web saya' in command:
-        speak(f"Saya membuka web {nama_bos}.")
-        print(f'Ayy: Saya membuka web {nama_bos}.')
+        speak(f"Saya membuka web {nama_pengguna}.")
+        print(f'Ayy: Saya membuka web {nama_pengguna}.')
         webbrowser.open('https://vnath-portfolio.vercel.app')
     
     elif 'jam berapa sekarang' in command:
@@ -96,11 +96,10 @@ def assistant(command):
         print(f'Ayy: Sekarang jam {waktu_sekarang}')
     
     elif 'terima kasih' in command:
-        speak(f"Sama-sama, {nama_bos}! Senang bisa membantu. Sampai jumpa!")
-        print(f'Ayy: Sama-sama, {nama_bos}! Senang bisa membantu. Sampai jumpa!')
+        speak(f"Sama-sama, {nama_pengguna}! Senang bisa membantu. Sampai jumpa!")
+        print(f'Ayy: Sama-sama, {nama_pengguna}! Senang bisa membantu. Sampai jumpa!')
         exit()
     else:
-        speak("Maaf, saya tidak mengerti perintah tersebut.")
         print('Ayy: Maaf, saya tidak mengerti perintah tersebut.')
 
 # salam saat program dimulai
