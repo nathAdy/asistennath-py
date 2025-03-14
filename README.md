@@ -8,12 +8,12 @@ Asisten virtual berbasis **Python** yang dapat menerima perintah suara dalam Bah
 ✅ **Text-to-Speech** dalam Bahasa Indonesia dengan `gTTS`
 ✅ **Membuka Website** seperti Google & YouTube
 ✅ **Menampilkan Waktu Saat Ini**
-✅ **Membuka Kamera** 
+✅ **Membuka Kamera**
 
 ## 🔧 Instalasi
 Pastikan Python telah terinstal di komputer Anda, lalu install dependensi dengan perintah berikut:
 ```bash
-pip install speechrecognition gtts webbrowser
+pip install speechrecognition gtts pyaudio webbrowser
 ```
 
 ## 🚀 Cara Menggunakan
@@ -35,6 +35,7 @@ pip install speechrecognition gtts webbrowser
 - `gtts` → Mengubah teks menjadi suara
 - `webbrowser` → Membuka halaman web
 - `datetime` → Menampilkan waktu saat ini
+- `os` → Membuka aplikasi system dan membantu memutar audio voice asisstant
 - `os` → Membuka aplikasi system dan membantu memutar audio voice asisstant
 
 ## 📌 Catatan
