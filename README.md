@@ -35,7 +35,7 @@ pip install speechrecognition gtts webbrowser
 - `gtts` → Mengubah teks menjadi suara
 - `webbrowser` → Membuka halaman web
 - `datetime` → Menampilkan waktu saat ini
-- `os` → 'membuka aplikasi system dan membantu memutar audio voice asisstant'
+- `os` → Membuka aplikasi system dan membantu memutar audio voice asisstant
 
 ## 📌 Catatan
 - Program ini hanya mendukung Bahasa Indonesia.
